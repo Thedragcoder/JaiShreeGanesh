@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="/">UN Member States</a>
+    </div>
+
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a class="" href="/un/countries">All Countries</a></li>
+        <li><a class="" href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Account</summary>
+            <ul class="p-2 right-0">
+              <li><a class="" href="/login">Login</a></li>
+              <li><a class="active" href="/register">Register</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-center hidden sm:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class= "" href="/un/countries">All Countries</a></li>
+        <li><a class= "" href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Account</summary>
+            <ul class="p-2 right-0">
+              <li><a class="" href="/login">Login</a></li>
+              <li><a class="active" href="/register">Register</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center ">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Register</h1>
+          <p class="py-6">Please provide your credentials below</p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <form method="post" action="/register" class="space-y-4">
+      <div class="flex flex-col">
+        <label for="userName" class="text-sm font-semibold text-gray-600">User Name</label>
+        <input
+          id="userName"
+          name="userName"
+          type="text"
+          placeholder="User Name"
+          required
+          value=""
+          class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="password" class="text-sm font-semibold text-gray-600">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          required
+          class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="password2" class="text-sm font-semibold text-gray-600">Confirm Password</label>
+        <input
+          id="password2"
+          name="password2"
+          type="password"
+          placeholder="Confirm Password"
+          required
+          class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="email" class="text-sm font-semibold text-gray-600">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          required
+          class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+        />
+      </div>
+
+      <input
+        type="submit"
+        class="bg-green-500 text-white p-2 rounded-md cursor-pointer hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-500"
+        value="Register"
+      />
+    </form>
+
+  </div>
+
+</body>
+
+</html>
